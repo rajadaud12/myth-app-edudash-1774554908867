@@ -4,6 +4,7 @@ import 'package:edudash_app/screens/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(EduDashApp());
 }
 
@@ -16,11 +17,17 @@ class EduDashApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary,
         scaffoldBackgroundColor: AppColors.background,
-        textTheme: GoogleFonts.poppinsTextTheme(),
+        textTheme: GoogleFonts.poppins(
+          textStyle: TextStyle(
+            fontFamily: 'Poppins',
+            color: AppColors.textDark,
+          ),
+        ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primary,
-          background: AppColors.background,
+          brightness: Brightness.light,
         ),
+        useMaterial3: true,
       ),
       home: HomeScreen(),
     );
