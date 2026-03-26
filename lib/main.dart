@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:edudash_app/utils/colors.dart'; 
-import 'package:edudash_app/screens/dashboard.dart'; 
+import 'package:edudash_app/screens/home.dart'; 
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class EduDashApp extends StatelessWidget {
           background: AppColors.background,
         ),
       ),
-      home: DashboardScreen(),
+      home: HomeScreen(),
     );
   }
 }
